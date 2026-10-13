@@ -136,3 +136,21 @@ python portfolio_baseline.py   # X-mixer + penalty baseline
 # 3. Optional: run on real IBM hardware
 #    Requires an IBM Quantum API token saved locally
 python hardware_run.py
+
+Hardware
+Backend: ibm_fez (156 qubits)
+
+Shots: 4096 per depth
+
+Error suppression: dynamical decoupling (XpXm), gate twirling,
+measurement twirling
+
+Credits
+QAOA: Farhi et al. (2014)
+
+Portfolio formulation: Sachdeva et al. (2024)
+
+XY-mixer: Hadfield et al., Wang et al.
+
+Barren plateaus: McClean et al. (2018)
+
