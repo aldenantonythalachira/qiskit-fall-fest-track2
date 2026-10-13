@@ -1,7 +1,12 @@
 # Quantum Portfolio Optimization with Constraint-Preserving QAOA
 
-Qiskit Fall Fest 2026 — Track 2: Quantum Optimization
-Level: Advanced
+# Quantum Portfolio Optimization with Constraint-Preserving QAOA
+
+QAOA-based portfolio optimization where you pick exactly K of n stocks to balance return against risk. This repo compares three circuit constructions — penalty QAOA, XY-mixer with Dicke initialization, and XY-mixer with a CVaR objective — and validates each against brute force, classical baselines (greedy, simulated annealing), and real IBM Quantum hardware.
+
+**Key finding:** The XY-mixer guarantees every shot is a valid portfolio in ideal simulation, but readout errors push the valid fraction down to 0.35–0.43 on real hardware even though the optimal portfolio still survives. That ideal-vs-device gap is the practical bottleneck for constraint-constrained quantum optimization today.
+
+Built for Qiskit Fall Fest 2026, Track 2. Advanced level.
 
 ## Problem
 Budget-constrained portfolio selection: pick exactly K of n stocks.
@@ -33,11 +38,6 @@ portfolio_baseline.py - X-mixer + penalty baseline
 hardware_results.json - raw hardware data
 baseline_results.png, xy_qaoa_results.png - figures
 
-## How to run
-python3 -m venv .venv
-source .venv/bin/activate
-pip install -r requirements.txt
-python xy_qaoa.py
 
 ## Hardware job IDs
 db77hr6r6oqs7386u6c0
