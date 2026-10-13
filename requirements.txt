@@ -1,0 +1,12 @@
+qiskit>=2.5.0
+qiskit-aer>=0.17.0
+qiskit-finance
+qiskit-optimization
+qiskit-ibm-runtime
+qiskit-algorithms
+matplotlib
+numpy
+scipy
+pandas
+jupyter
+pylatexenc
