@@ -63,14 +63,17 @@ Every shot is valid. CVaR converges to the optimum at p=3.
 
 ### Scaling (n=12, K=6)
 
-| Method                  | Approximation ratio |
-|-------------------------|---------------------|
-| Greedy                  | 0.727               |
-| Simulated annealing     | 0.993               |
+| Method                  | Approximation ratio    |
+|-------------------------|------------------------|
+| Greedy                  | 0.727                  |
+| Simulated annealing     | 0.993                  |
 | XY-QAOA p=1 (2 params)  | CVaR 0.802, best 1.000 |
+| XY-QAOA p=2 (4 params)  | CVaR 0.889, best 1.000 |
 
 At p=1 with only two variational parameters, XY-QAOA found the true optimum
-in its sampled distribution.
+in its sampled distribution. At p=2, CVaR improved from 0.802 to 0.889, but
+the best sampled portfolio was already exact at p=1 — additional depth
+sharpened the average-quality objective without changing the answer.
 
 ### Hardware (ibm_fez)
 
